@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handle</title>
+    <script defer src="../scripts/main.js"></script>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="icon" type="image/png" href="../icons/icon-48.png"/>
+
+</head>
+
+<body>
+    <section class="form">
+        <div>
+            <div class="header">
+                <select class="header-input method" id="method" list="methods">
+                    <option value="GET">GET</option>
+                    <option value="POST" selected>POST</option>
+                    <option value="PUT">PUT</option>
+                    <option value="DELTE">DELTE</option>
+                </select><input class="header-input " id="url" type="url" placeholder="URL">
+                <input class="submit" id="send" type="button" value="Send">
+            </div>
+            <div class="body">
+                <label>Form</label> <button id="addFormRowBtn" class="smallBtn">+</button>
+                <form id="form" action="javascript:void(0);">
+                    <ul id="form-data">
+                        <li>
+                            <input class="from-data-key" type="text" placeholder="Name">
+                            <input class="from-data-value" type="text" placeholder="Value">
+                            <button class="removeRowBtn smallBtn">X</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <datalist id="methods">
+            </datalist>
+        </div>
+    </section>
+    <section class="history">
+        <label class="section-lable">History</label>
+        <button id="clear-history" class="clear">Clear</button>
+        <ul id="history">
+
+        </ul>
+    </section>
+</body>
+
+</html>
